@@ -5,10 +5,10 @@ import { Link } from "react-router-dom"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen w-full bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header className="w-full bg-white shadow-sm">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <Brain className="h-8 w-8 text-indigo-600 mr-3" />
@@ -27,7 +27,7 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="w-full px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
           <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Revolutionize Your Hiring Process</h2>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
