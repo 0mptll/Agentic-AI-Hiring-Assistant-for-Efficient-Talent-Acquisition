@@ -1,4 +1,6 @@
-import { Briefcase, Users, BarChart3, Settings, Home, Plus } from "lucide-react"
+"use client"
+
+import { Briefcase, Users, BarChart3, Settings, Home, Plus, LogOut } from "lucide-react"
 import {
   Sidebar,
   SidebarContent,
@@ -88,6 +90,20 @@ export function HRSidebar() {
       </SidebarContent>
 
       <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              onClick={() => {
+                localStorage.removeItem("user")
+                window.location.href = "/"
+              }}
+              className="text-red-600 hover:text-red-700 hover:bg-red-50"
+            >
+              <LogOut />
+              <span>Logout</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
         <div className="px-2 py-2 text-sm text-muted-foreground">Agentic AI Hiring Assistant</div>
       </SidebarFooter>
     </Sidebar>
