@@ -15,11 +15,11 @@ export default function HomePage() {
               <h1 className="text-2xl font-bold text-gray-900">Agentic AI Hiring Assistant</h1>
             </div>
             <div className="flex space-x-4">
-              <Link to="/hr/dashboard">
-                <Button variant="outline">HR Login</Button>
+              <Link to="/auth/login">
+                <Button variant="outline">Sign In</Button>
               </Link>
-              <Link to="/candidate/dashboard">
-                <Button>Candidate Login</Button>
+              <Link to="/auth/register">
+                <Button>Get Started</Button>
               </Link>
             </div>
           </div>
@@ -89,17 +89,23 @@ export default function HomePage() {
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Get Started Today</h3>
           <div className="flex justify-center space-x-6">
-            <Link to="/hr/dashboard">
+            <Link to="/auth/register">
               <Button size="lg" className="px-8">
-                HR Dashboard
+                Join as HR
               </Button>
             </Link>
-            <Link to="/candidate/dashboard">
+            <Link to="/auth/register">
               <Button size="lg" variant="outline" className="px-8">
-                Candidate Portal
+                Join as Candidate
               </Button>
             </Link>
           </div>
+          <p className="mt-4 text-sm text-gray-600">
+            Already have an account?{" "}
+            <Link to="/auth/login" className="text-indigo-600 hover:text-indigo-500 font-medium">
+              Sign in here
+            </Link>
+          </p>
         </div>
       </main>
     </div>
