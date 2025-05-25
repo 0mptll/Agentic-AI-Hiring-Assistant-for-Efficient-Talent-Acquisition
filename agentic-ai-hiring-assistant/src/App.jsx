@@ -3,6 +3,8 @@ import { SidebarProvider } from "@/components/ui/sidebar"
 
 // Import pages
 import HomePage from "@/pages/HomePage"
+import Login from "@/pages/auth/Login"
+import Register from "@/pages/auth/Register"
 import HRLayout from "@/layouts/HRLayout"
 import CandidateLayout from "@/layouts/CandidateLayout"
 import HRDashboard from "@/pages/hr/HRDashboard"
@@ -19,8 +21,10 @@ function App() {
       <Router>
         <div className="App">
           <Routes>
-            {/* Home Page */}
+            {/* Public Routes */}
             <Route path="/" element={<HomePage />} />
+            <Route path="/auth/login" element={<Login />} />
+            <Route path="/auth/register" element={<Register />} />
 
             {/* HR Routes */}
             <Route path="/hr" element={<HRLayout />}>
